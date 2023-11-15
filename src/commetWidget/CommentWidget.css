@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f8fa; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+textarea {
+  padding: 12px;
+  margin-bottom: 12px;
+  resize: none;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #1da1f2; 
+  color: #fff;
+  padding: 12px;
+  border: none;
+  margin-bottom: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1581c2; /* Darker shade for hover effect */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; 
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.comment-details {
+  flex-grow: 1;
+}
+
+.comment-text {
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  margin-top: 8px;
+}
+
+.action-button {
+  background-color: #ddd;
+  padding: 8px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background-color: #ccc;
+}
+
+.like-button {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.like-button:hover {
+  background-color: #1581c2;
+}
+
+.like-count {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  li {
+    flex-direction: row; /* Change back to row layout for smaller screens */
+  }
+
+  .avatar {
+    margin-bottom: 0; /* Reduce margin for avatars on smaller screens */
+    margin-right: 8px;
+  }
+}
+
+/* Additional Styles for Reply Feature */
+.reply-form {
+  margin-top: 16px;
+}
+.form-buttons{
+  padding-left: 4px;
+}
+
+.reply-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.reply-textarea {
+  padding: 12px;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  width: calc(100% - 16px);
+  margin-right: 8px;
+}
+
+.reply-button {
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.reply-button:hover {
+  background-color: #1581c2;
+}
+
+.avatar {
+  margin-right: 16px; /* Adjust margin as needed */
+}
+
+.avatar svg {
+    width: 40PX;
+    border-radius: 50%;
+    HEIGHT: 40PX;
+    MARGIN: 6PX;
+}
+
+.comment-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.comment-text {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.actions {
+  margin-right: 16px;
+}
+
+.like-count {
+  color: #888;
+  font-size: 12px;
+}
+
+/* CommentForm.css */
+.comment-form {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.comment-input {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.comment-actions {
+  display: flex;
+}
+
+.comment-actions button {
+  margin-right: 8px;
+}
+
+/* CommentWidget.css */
+.comment-widget {
+  max-width: 800px; /* Set your desired max width */
+  margin: 0 auto; /* Center the widget */
+  padding: 16px; /* Add padding as needed */
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Add responsive styles for the CommentItem component */
+@media screen and (max-width: 600px) {
+  .comment-widget {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+@media screen and (max-width: 600px) {
+  .avatar {
+    margin-right: 8px;
+  }
+
+  .avatar svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .comment-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment-text {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .actions {
+    margin-right: 0;
+  }
+
+  .like-count {
+    font-size: 10px;
+  }
+}
+
+
